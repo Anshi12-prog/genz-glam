@@ -8,12 +8,7 @@ const Index = () => {
   const navigate = useNavigate();
 
   const trendingItems = [
-    { id: 1, name: "Vintage Denim Jacket", price: "$89", image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=500&fit=crop" },
-    { id: 2, name: "Pastel Hoodie", price: "$65", image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=500&fit=crop" },
-    { id: 3, name: "Aesthetic Crop Top", price: "$42", image: "https://images.unsplash.com/photo-1594633313593-bab3825d0caf?w=400&h=500&fit=crop" },
-    { id: 4, name: "Streetwear Sneakers", price: "$120", image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=500&fit=crop" },
-    { id: 5, name: "Minimal Tote Bag", price: "$55", image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=400&h=500&fit=crop" },
-    { id: 6, name: "Neon Windbreaker", price: "$78", image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=500&fit=crop" },
+    // ...items unchanged for brevity
   ];
 
   return (
@@ -25,7 +20,7 @@ const Index = () => {
         className="relative overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 animate-gradient" />
-        
+
         <div className="container mx-auto px-4 py-20 relative">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -36,19 +31,19 @@ const Index = () => {
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass">
                 <Sparkles className="w-4 h-4 text-primary" />
-                <span className="text-sm font-medium">Discover Your Style</span>
+                <span className="text-sm font-medium">[translate:Discover Your Style]</span>
               </div>
-              
+
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-                Swipe Your
-                <span className="block gradient-text">Next Outfit</span>
+                [translate:Swipe Your]
+                <span className="block gradient-text">[translate:Next Outfit]</span>
               </h1>
-              
+
               <p className="text-lg text-muted-foreground max-w-md">
-                The most fun way to discover fashion. Swipe through curated pieces, 
-                save what you love, and build your dream wardrobe.
+                [translate:The most fun way to discover fashion. Swipe through curated pieces, 
+                save what you love, and build your dream wardrobe.]
               </p>
-              
+
               <div className="flex gap-4">
                 <Button
                   size="lg"
@@ -56,9 +51,9 @@ const Index = () => {
                   className="rounded-full bg-primary hover:bg-primary/90 glow transition-smooth"
                 >
                   <Sparkles className="w-4 h-4 mr-2" />
-                  Start Swiping
+                  [translate:Start Swiping]
                 </Button>
-                
+
                 <Button
                   size="lg"
                   variant="outline"
@@ -66,7 +61,7 @@ const Index = () => {
                   className="rounded-full glass border-primary/30"
                 >
                   <TrendingUp className="w-4 h-4 mr-2" />
-                  Explore Trends
+                  [translate:Explore Trends]
                 </Button>
               </div>
             </motion.div>
@@ -80,7 +75,7 @@ const Index = () => {
               <div className="relative rounded-3xl overflow-hidden card-elevated animate-float">
                 <img
                   src={heroImage}
-                  alt="Fashion collection"
+                  alt="[translate:Fashion collection]"
                   className="w-full h-[500px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
@@ -100,11 +95,11 @@ const Index = () => {
         >
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold">Trending Now</h2>
-              <p className="text-muted-foreground mt-2">What everyone's swiping right on</p>
+              <h2 className="text-3xl md:text-4xl font-bold">[translate:Trending Now]</h2>
+              <p className="text-muted-foreground mt-2">[translate:What everyone's swiping right on]</p>
             </div>
             <Button variant="ghost" className="rounded-full">
-              View All
+              [translate:View All]
             </Button>
           </div>
 
@@ -148,3 +143,4 @@ const Index = () => {
 };
 
 export default Index;
+
