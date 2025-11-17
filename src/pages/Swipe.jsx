@@ -7,7 +7,7 @@ import { toast } from "sonner";
 
 const Swipe = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState<"left" | "right" | null>(null);
+  const [direction, setDirection] = useState(null);
 
   const moods = ["Casual", "Aesthetic", "Streetwear", "Formal", "Vintage"];
   const [selectedMood, setSelectedMood] = useState("Casual");
@@ -15,66 +15,66 @@ const Swipe = () => {
   const items = [
     {
       id: 1,
-      name: "Oversized Lavender Hoodie",
-      brand: "Urban Vibe",
+      name: "[translate:Oversized Lavender Hoodie]",
+      brand: "[translate:Urban Vibe]",
       price: "$89",
       image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&h=800&fit=crop",
-      description: "Cozy oversized fit with pastel lavender tone",
+      description: "[translate:Cozy oversized fit with pastel lavender tone]",
       tags: ["Streetwear", "Casual"],
     },
     {
       id: 2,
-      name: "Vintage Denim Jacket",
-      brand: "RetroFit",
+      name: "[translate:Vintage Denim Jacket]",
+      brand: "[translate:RetroFit]",
       price: "$125",
       image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&h=800&fit=crop",
-      description: "Classic 90s-inspired denim with distressed details",
+      description: "[translate:Classic 90s-inspired denim with distressed details]",
       tags: ["Vintage", "Casual"],
     },
     {
       id: 3,
-      name: "Minimal White Crop Top",
-      brand: "Clean Lines",
+      name: "[translate:Minimal White Crop Top]",
+      brand: "[translate:Clean Lines]",
       price: "$45",
       image: "https://images.unsplash.com/photo-1594633313593-bab3825d0caf?w=600&h=800&fit=crop",
-      description: "Essential piece for every wardrobe",
+      description: "[translate:Essential piece for every wardrobe]",
       tags: ["Aesthetic", "Casual"],
     },
     {
       id: 4,
-      name: "Neon Windbreaker",
-      brand: "Flash Forward",
+      name: "[translate:Neon Windbreaker]",
+      brand: "[translate:Flash Forward]",
       price: "$95",
       image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&h=800&fit=crop",
-      description: "Bold neon accents with waterproof material",
+      description: "[translate:Bold neon accents with waterproof material]",
       tags: ["Streetwear"],
     },
     {
       id: 5,
-      name: "Pastel Pink Blazer",
-      brand: "Soft Power",
+      name: "[translate:Pastel Pink Blazer]",
+      brand: "[translate:Soft Power]",
       price: "$145",
       image: "https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=600&h=800&fit=crop",
-      description: "Structured fit with a playful pastel twist",
+      description: "[translate:Structured fit with a playful pastel twist]",
       tags: ["Formal", "Aesthetic"],
     },
   ];
 
   const currentItem = items[currentIndex];
 
-  const handleSwipe = (liked: boolean) => {
+  const handleSwipe = (liked) => {
     setDirection(liked ? "right" : "left");
-    
+
     setTimeout(() => {
       if (liked) {
-        toast.success(`${currentItem.name} added to wardrobe! ❤️`);
+        toast.success(`${currentItem.name} [translate:added to wardrobe!] ❤️`);
       }
-      
+
       if (currentIndex < items.length - 1) {
         setCurrentIndex(currentIndex + 1);
       } else {
         setCurrentIndex(0);
-        toast("No more items to swipe! Starting over...");
+        toast("[translate:No more items to swipe! Starting over...]");
       }
       setDirection(null);
     }, 300);
@@ -126,10 +126,10 @@ const Swipe = () => {
                     alt={currentItem.name}
                     className="w-full h-full object-cover"
                   />
-                  
+
                   {/* Overlay Info */}
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
-                  
+
                   <div className="absolute bottom-0 left-0 right-0 p-6 space-y-4">
                     <div className="flex items-start justify-between">
                       <div className="space-y-2">
@@ -141,9 +141,9 @@ const Swipe = () => {
                         <Info className="w-5 h-5" />
                       </Button>
                     </div>
-                    
+
                     <p className="text-sm text-muted-foreground">{currentItem.description}</p>
-                    
+
                     <div className="flex gap-2">
                       {currentItem.tags.map((tag) => (
                         <Badge key={tag} variant="secondary" className="rounded-full">
@@ -172,7 +172,7 @@ const Swipe = () => {
           >
             <X className="w-8 h-8" />
           </Button>
-          
+
           <Button
             size="lg"
             onClick={() => handleSwipe(true)}
@@ -192,3 +192,4 @@ const Swipe = () => {
 };
 
 export default Swipe;
+
