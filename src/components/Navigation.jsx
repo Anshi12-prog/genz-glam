@@ -25,7 +25,7 @@ export const Navigation = () => {
             transition={{ delay: 0.2 }}
             className="text-2xl font-bold gradient-text"
           >
-            FitSwipe
+            [translate:FitSwipe]
           </motion.div>
 
           <div className="hidden md:flex items-center gap-1">
@@ -69,3 +69,4 @@ export const Navigation = () => {
     </motion.nav>
   );
 };
+
