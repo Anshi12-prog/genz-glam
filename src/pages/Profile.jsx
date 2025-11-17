@@ -10,30 +10,30 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 const Profile = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [preferences, setPreferences] = useState([
-    "Streetwear",
-    "Aesthetic",
-    "Casual",
-    "Vintage",
+    "[translate:Streetwear]",
+    "[translate:Aesthetic]",
+    "[translate:Casual]",
+    "[translate:Vintage]",
   ]);
 
   const allStyles = [
-    "Streetwear",
-    "Aesthetic",
-    "Casual",
-    "Formal",
-    "Vintage",
-    "Minimalist",
-    "Grunge",
-    "Y2K",
+    "[translate:Streetwear]",
+    "[translate:Aesthetic]",
+    "[translate:Casual]",
+    "[translate:Formal]",
+    "[translate:Vintage]",
+    "[translate:Minimalist]",
+    "[translate:Grunge]",
+    "[translate:Y2K]",
   ];
 
   const stats = [
-    { label: "Items Liked", value: "127", icon: Heart },
-    { label: "Swipes", value: "1.2K", icon: Sparkles },
-    { label: "Outfits Created", value: "45", icon: User },
+    { label: "[translate:Items Liked]", value: "127", icon: Heart },
+    { label: "[translate:Swipes]", value: "1.2K", icon: Sparkles },
+    { label: "[translate:Outfits Created]", value: "45", icon: User },
   ];
 
-  const togglePreference = (style: string) => {
+  const togglePreference = (style) => {
     setPreferences(prev =>
       prev.includes(style)
         ? prev.filter(s => s !== style)
@@ -67,9 +67,9 @@ const Profile = () => {
                 </div>
 
                 <div className="flex-1 text-center md:text-left">
-                  <h1 className="text-3xl font-bold mb-2">Jamie Doe</h1>
-                  <p className="text-muted-foreground mb-4">@jamiedoe • Fashion Enthusiast</p>
-                  
+                  <h1 className="text-3xl font-bold mb-2">[translate:Jamie Doe]</h1>
+                  <p className="text-muted-foreground mb-4">@jamiedoe • [translate:Fashion Enthusiast]</p>
+
                   <div className="grid grid-cols-3 gap-4">
                     {stats.map((stat) => (
                       <div key={stat.label} className="text-center">
@@ -85,7 +85,7 @@ const Profile = () => {
 
                 <Button className="rounded-full glass">
                   <Settings className="w-4 h-4 mr-2" />
-                  Settings
+                  [translate:Settings]
                 </Button>
               </div>
             </CardContent>
@@ -101,9 +101,9 @@ const Profile = () => {
         >
           <Card className="glass card-elevated">
             <CardHeader>
-              <CardTitle>Fashion Preferences</CardTitle>
+              <CardTitle>[translate:Fashion Preferences]</CardTitle>
               <CardDescription>
-                Select your favorite styles to get personalized recommendations
+                [translate:Select your favorite styles to get personalized recommendations]
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -133,9 +133,9 @@ const Profile = () => {
         >
           <Card className="glass card-elevated">
             <CardHeader>
-              <CardTitle>Appearance</CardTitle>
+              <CardTitle>[translate:Appearance]</CardTitle>
               <CardDescription>
-                Customize how FitSwipe looks for you
+                [translate:Customize how FitSwipe looks for you]
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -148,9 +148,9 @@ const Profile = () => {
                       <Sun className="w-5 h-5 text-primary" />
                     )}
                     <div>
-                      <p className="font-medium">Dark Mode</p>
+                      <p className="font-medium">[translate:Dark Mode]</p>
                       <p className="text-sm text-muted-foreground">
-                        Switch between light and dark themes
+                        [translate:Switch between light and dark themes]
                       </p>
                     </div>
                   </div>
@@ -161,7 +161,7 @@ const Profile = () => {
                 </div>
 
                 <div className="p-4 rounded-xl glass">
-                  <p className="font-medium mb-2">Color Accent</p>
+                  <p className="font-medium mb-2">[translate:Color Accent]</p>
                   <div className="flex gap-3">
                     <button className="w-10 h-10 rounded-full bg-primary border-2 border-primary-foreground" />
                     <button className="w-10 h-10 rounded-full bg-secondary" />
@@ -179,3 +179,4 @@ const Profile = () => {
 };
 
 export default Profile;
+
